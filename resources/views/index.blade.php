@@ -43,7 +43,7 @@
 				<!-- НАЧАЛО: Шапка карточки -->
 				<div class="card-header border-info">
 					<h5 class="card-title mb-0">
-						<a href="#">
+						<a href="/vote/show/{{$item['id']}}">
 							{{$item['title']}}
 						</a>
 					</h5>
@@ -56,13 +56,13 @@
 						{{$item['text']}}
 					</p>
 					<!-- Кнопки голосования -->
-					<a href="#" class="btn btn-outline-success mr-3">
+					<a href="/vote/positive_inc/{{$item['id']}}" class="btn btn-outline-success mr-3">
 						<i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Я за!
 						<span class="badge badge-pill badge-success">
 							{{$item['positive']}}
 						</span>
 					</a>
-					<a href="#" class="btn btn-outline-danger mr-3">
+					<a href="/vote/negative_inc/{{$item['id']}}" class="btn btn-outline-danger mr-3">
 						<i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Я против!
 						<span class="badge badge-pill badge-danger">
 							{{$item['negative']}}
