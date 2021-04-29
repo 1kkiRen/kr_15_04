@@ -9,7 +9,7 @@ class VoteController extends Controller
 {
     public function showAll(){
         $votes = Vote::All();
-        return view('index', ['votes' => $votes]);
+        return view('index', ['votes' => Vote::paginate(5)]);
     }
 
     public function create(Request $req){
@@ -42,3 +42,4 @@ class VoteController extends Controller
         return back();
     }
 }
+
